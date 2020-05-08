@@ -1,0 +1,122 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MVN</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <div id="main">
+      <div id="header">PCS3216 - Sistemas de Programação | Simulador MVN | Leonardo Akira Shimabukuro - 9838053</div>
+      <div id="interface">
+        <div id="painelControle">
+          <div id="painelOperacoes">
+            <h1>Controle da MVN</h1>
+            <h3>Execução</h3>
+            <button id="botaoExecutar">Executar</button>
+            <button id="botaoExecutarPasso">Executar Passo</button>
+            <button id="botaoParar">Forçar Parada</button><br>
+            <h3>Registradores</h3>
+            <button id="botaoSetPC">Editar Program Counter</button>
+            <button id="botaoSetAccumulator">Editar Acumulador</button>
+          </div>
+          <div id="painelArquivos">
+            <h1>Arquivos</h1>
+            <button id="arquivoCriar">Criar Arquivo</button>
+            <button id="arquivoRestaurarExemplos">Restaurar Exemplos</button><br>
+            <ul id="arquivoLista">
+            </ul>
+          </div>
+        </div>
+        <div id="painelIO">
+          <div id="painelArquivoEntradaSaida">
+            <div id="painelIOArquivo">
+              <h2>Arquivo</h2>
+              <h3 id="arquivoName">arquivo.txt</h3>
+              <div id="arquivoBotoes">
+                <button id="arquivoSalvar">Salvar</button>
+                <button id="arquivoExecutar">Carregar e Executar</button>
+                <button id="arquivoMontar">Montar</button>
+              </div>
+              <textarea id="arquivoContent"></textarea>
+            </div>
+            <div id="painelIOEntrada">
+              <h2>Entrada</h2>
+              <textarea id="entradaTextArea"></textarea>
+            </div>
+            <div id="painelIOSaida">
+              <h2>Saída</h2>
+              <textarea id="saidaTextArea"></textarea>
+            </div>
+          </div>
+          <div id="painelConsole">
+            <h1>Console</h1>
+          </div>
+        </div>
+        <div id="painelDados">
+          <div id="painelEstadoMVN">
+          <h1>Estado da MVN</h1>
+          <table id="tabelaEstado">
+            <tr>
+              <td><b>Program Counter</b></td>
+              <td id="programCounterDisplay"></td>
+            </tr>
+            <tr><th>-</th></tr>
+            <tr>
+              <td><b>Instrução</b></td>
+              <td id="nomeInstrucao"></td>
+            </tr>
+            <tr>
+              <td><b>Mnemônico</b></td>
+              <td id="mnemonicoInstrucao"></td>
+            </tr>
+            <tr>
+              <td><b>Comprimento</b></td>
+              <td id="comprimentoInstrucao"></td>
+            </tr>
+            <tr>
+              <td><b>Bytes</b></td>
+              <td id="bytesInstrucao"></td>
+            </tr>
+            <tr>
+              <td><b>Operando</b></td>
+              <td id="operandoInstrucao"></td>
+            </tr>
+            <tr><th>-</th></tr>
+            <tr>
+              <td><b>Acumulador</b></td>
+              <td id="accumulatorDisplay"></td>
+            </tr>
+            <tr><th>-</th></tr>
+            <tr>
+              <td><b>Estado</b></td>
+              <td id="estadoHalted"></td>
+            </tr>
+            <tr>
+              <td><b>Motivo</b></td>
+              <td id="estadoHaltedMotivo">-</td>
+            </tr>
+          </table>
+        </div>
+        <div id="painelMemoriaMVN">
+          <h1>Memória</h1>
+          <div id="memoryButtons">
+            <button id="botaoCarregarMemoria">Carregar Memória</button>
+            <button id="botaoExportarMemoria">Exportar Memória</button>
+          </div>
+          <table id="memoryTable"></table>
+          <div id="controlePaginaMemoria">
+            <button id="memoriaPaginaAnterior">&lt;</button>
+            <span id="memoriaPaginaAtual">Página 01/16</span>
+            <button id="memoriaPaginaSeguinte">&gt;</button>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+    <script src="data.js"></script>
+    <script src="montador.js"></script>
+    <script src="mvn.js"></script>
+    <script src="extra.js"></script>
+  </body>
+</html>
